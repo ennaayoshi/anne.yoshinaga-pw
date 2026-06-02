@@ -1,91 +1,176 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang = "pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>- Aula 2 -</title>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title> Aula 3 </title>
 </head>
 
 <body>
 
+    <section>
     <h1> Calculadora </h1>
 
-    1º Número <br/>
-    <input type = "number" id = "numero1"> <br>
+    <label> 1º Número </label><br>
+    <input type = "number" id = "numero1"><br>
 
-    2º Número <br/>
-    <input type = "number" id = "numero2"> <br/><br/>
+    <label> 2º Número </label><br>
+    <input type = "number" id = "numero2"><br><br>
 
+    <div class = "botoes">
     <button onclick = "somar()"> Somar </button>
     <button onclick = "subtrair()"> Subtrair </button>
     <button onclick = "multiplicar()"> Multiplicar </button>
-    <button onclick = "dividir()"> Dividir</button>
+    <button onclick = "dividir()"> Dividir </button>
+    </div>
 
-    <br></br>
+    <br><br>
 
-    O Resultado é = <span id = "resultado"></span>
+    <div class = "resultado">
+    Resultado = <span id = "resultado"></span>
+    </div>
 
+    </section>
+
+    <hr>
+
+    <section>
     <h1> Geometria </h1>
 
-    Base Triângulo △ <br/>
-    <input type = "number" id = "baseT"> <br>
+    <h3> Triângulo △ </h3>
 
-    Altura Triângulo △ <br/>
-    <input type = "number" id = "alturaT"> <br>
+    <label> Base </label><br>
+    <input type = "number" id = "baseT"><br>
 
-    </br>
+    <label> Altura </label><br>
+    <input type = "number" id = "alturaT"><br><br>
 
+    <div class = "botoes">
     <button onclick = "areaTriangulo()"> Área △ </button>
+    </div>
+
+    <br><br>
+
+    <div class = "resultado">
+    Área = <span id = "resultadoT"></span>
+    </div>
 
     <br></br>
 
-    A Área é = <span id = "resultadoT"></span>
+    <h3> Quadrado □ </h3>
 
-    <br/><br/>
+    <label> Lado </label><br>
+    <input type = "number" id = "ladoQuadrado"><br><br>
 
-    Lado do Quadrado □ <br/>
-    <input type = "number" id = "ladoQuadrado"> <br>
+    <div class = "botoes">
+    <button onclick = "areaQuadrado()"> Área □ </button>
+    </div>
 
-    </br>
+    <br><br>
 
-    <button onclick = "areaQuadrado()"> Área ☐ </button>
+    <div class = "resultado">
+    Área = <span id = "resultadoQ"></span>
+    </div>
 
-    <br><br/>
-    A Área é = <span id = "resultadoQ"></span>
+    </section>
 
+    <hr>
+
+    <section>
     <h1> Verificação de Idade </h1>
 
-    Idade: <br/>
-    <input type = "number" id = "idade"> <br>
+    <label> Idade </label><br>
+    <input type = "number" id = "idade"><br><br>
 
-    </br>
-
+    <div class = "botoes">
     <button onclick = "verificar()"> Verificar </button>
+    </div>
 
-    <br></br>
+    <br><br>
 
+    <div class = "resultado">
     Verificação | <span id = "resultadoV"></span>
+    </div>
 
+    </section>
+
+    <hr>
+
+    <section>
     <h1> Par e Ímpar </h1>
 
-    Número: <br/>
-    <input type = "number" id = "numero"> <br>
+    <label> Número </label><br>
+    <input type = "number" id = "numero"><br><br>
 
-    </br>
+    <div class = "botoes">
+    <button onclick = "ParImpar()">Verificar</button>
+    </div>
 
-    <button onclick = "ParImpar()"> Verificar </button>
+    <br><br>
+
+    <div class = "resultado">
+    Par | <span id = "resultadoP"></span><br>
+    Ímpar | <span id = "resultadoI"></span>
+    </div>
+
+    </section>
+
+    <hr>
+
+    <section>
+    <h1> Porcentagem </h1>
+
+    <label> Número </label><br>
+    <input type = "number" id = "valorP"><br>
+
+    <label> Porcentagem (%) </label><br>
+    <input type = "number" id = "percentual"><br><br>
+
+    <div class = "botoes">
+    <button onclick = "lucro()"> Lucros </button>
 
     <br></br>
 
-    Par | <span id = "resultadoP"></span>
+    <button onclick = "desconto()"> Descontos </button>
+    </div>
 
-    <br/>
-    Ímpar | <span id = "resultadoI"></span>
+    <br><br>
 
-    <script src="js/calculo.js"></script>
-    <script src="js/geometria.js"></script>
-    <script src="js/verificacao.js"></script>
-    <script src="js/par-impar.js"></script>
+    <div class = "resultado">
+    Resultado = <span id = "resultadoD"></span>
+    </div>
+
+    </section>
+
+    <hr>
+
+    <section>
+    <h1> Compra </h1>
+
+    <label> Valor do Produto </label><br>
+    <input type = "number" id = "valorProduto"><br>
+
+    <br>
+
+    <div class = "botoes"> 
+    <button onclick = "totalPagar()"> Calcular Total </button>
+    </div>
+
+    <br><br>
+
+    <div class = "resultado">
+    Total = R$ <span id = "total"></span>
+    </div>
+
+    </section>
+
+    <script src = "js/calculo.js"></script>
+    <script src = "js/geometria.js"></script>
+    <script src = "js/verificacao.js"></script>
+    <script src = "js/par-impar.js"></script>
+    <script src = "js/porcentagem.js"></script>
+    <script src = "js/compra.js"></script>
 
 </body>
 </html>
