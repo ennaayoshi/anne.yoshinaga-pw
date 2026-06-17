@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff5f6;
+    color: #4a3b3c;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 45px 20px;
+    background-color: #ffffff;
+    border-bottom: 3px solid #ffccd5;
+    box-shadow: 0 2px 10px rgba(255, 204, 213, 0.2);
+}
+
+header h1 {
+    font-size: 2.4rem;
+    color: #ff8fa3;
+    font-weight: 700;
+}
+
+header p {
+    color: #a3888c;
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(255, 143, 163, 0.06);
+}
+
+/* Container dos botões */
+.contador-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Botões + e - */
+.btn-menos,
+.btn-mais {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9ecf, #ff6fb5);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 111, 181, 0.3);
+}
+
+.btn-menos:hover,
+.btn-mais:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff6fb5, #ff4da6);
+    box-shadow: 0 6px 15px rgba(255, 111, 181, 0.5);
+}
+
+.btn-menos:active,
+.btn-mais:active {
+    transform: scale(0.95);
+}
+
+.contador {
+    min-width: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff4da6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #fff0f2;
+    color: #ff758f;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 2px solid #ffccd5;
+}
+
+td {
+    padding: 20px 16px;
+    border-bottom: 1px solid #ffe5ec;
+    vertical-align: middle;
+}
+
+td img {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    border: 2px solid #ffe5ec;
+}
+
+td h3 {
+    color: #594245;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+td p {
+    color: #9e8488;
+    font-size: 0.85rem;
+}
+
+/* Estilização estilosa para o campo de quantidade input */
+input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    border: 2px solid #ffccd5;
+    border-radius: 8px;
+    color: #594245;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #ff8fa3;
+}
+
+.resumo-compra {
+    margin-top: 35px;
+    text-align: right;
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #ff758f;
+    padding-top: 25px;
+    border-top: 2px dashed #ffe5ec;
+}
+
+#valorGeralPedido {
+    color: #ff4d6d;
+    margin-left: 8px;
+}
