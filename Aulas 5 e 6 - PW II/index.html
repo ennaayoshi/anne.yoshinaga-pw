@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+<html lang = "en"> 
+ 
+<head> 
+  <meta charset = "UTF-8"> 
+  <meta http-equiv = "X-UA-Compatible" content = "IE=edge"> 
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> 
+
+  <title> Ferramenta de Cadastro Digital </title> 
+
+  <link rel = "stylesheet" href = "style.css"> 
+
+  <link href = "https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+        rel = "stylesheet">
+
+  <link href = "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel = "stylesheet">
+</head>  
+  
+<body>  
+
+  <div class = "login-container active" id="loginContainer">
+
+    <div class = "login-modal">
+
+      <form id = "loginForm">
+
+        <h2> Login </h2>
+
+        <p class = "login-text">
+          Informe suas credenciais para acessar o sistema.
+        </p>
+
+        <label for = "loginUsuario">
+           <i class="bx bx-user"></i>
+          Usuário
+        </label>
+
+        <input 
+          id = "loginUsuario" 
+          type = "text"
+          placeholder = "Digite seu usuário"
+          required
+        />
+
+        <label for = "loginSenha">
+          <i class="bx bx-lock-alt"></i>
+          Senha
+        </label>
+
+        <input 
+          id = "loginSenha" 
+          type = "password"
+          placeholder = "Digite sua senha"
+          required
+        />
+
+        <p id = "mensagemLogin"></p>
+
+        <button type = "submit" id = "btnLogin">
+          Entrar
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class = "container">  
+
+    <div class = "header">  
+
+      <span> Cadastro de Funcionários </span>  
+
+      <div class = "header-buttons">
+
+        <button onclick = "openModal()" id = "new">
+          Incluir
+        </button>
+
+        <button onclick = "logout()" id = "btnSair">
+          Sair
+        </button>
+
+      </div>
+
+    </div>  
+  
+  
+    <div class = "divTable">  
+
+      <table>  
+
+        <thead>  
+
+          <tr>  
+            <th> Nome </th> 
+            <th> Setor </th> 
+            <th> Função </th> 
+            <th> Salário </th> 
+            <th class = "acao"> Editar </th> 
+            <th class = "acao"> Excluir </th> 
+          </tr>  
+
+        </thead> 
+ 
+        <tbody>  
+        </tbody>  
+
+      </table>  
+
+    </div>  
+
+    <div class = "modal-container">  
+
+      <div class = "modal">  
+
+        <form>  
+
+          <label for = "m-nome">
+            Nome
+          </label>  
+
+          <input 
+            id = "m-nome" 
+            type = "text" 
+            required
+          />  
+           
+          <label for = "m-setor">
+            Setor
+          </label>  
+
+          <input 
+            id = "m-setor" 
+            type = "text" 
+            required
+          /> 
+ 
+          <label for = "m-funcao">
+            Função
+          </label>  
+
+          <input 
+            id = "m-funcao" 
+            type = "text" 
+            required
+          />  
+    
+          <label for="m-salario">
+            Salário
+          </label>  
+
+          <input 
+            id = "m-salario" 
+            type = "number" 
+            required
+          />  
+
+          <button 
+            type = "button" 
+            id = "btnSalvar">
+            Salvar
+          </button> 
+
+        </form>  
+
+      </div>  
+
+    </div>  
+  
+  </div>  
+
+  <script src = "script.js"></script>  
+
+</body>  
+  
+</html>

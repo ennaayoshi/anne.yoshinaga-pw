@@ -37,6 +37,13 @@ body {
     font-weight: 600;
 }
 
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
 #new {
     background: #10b981;
     color: white;
@@ -50,6 +57,23 @@ body {
 
 #new:hover {
     background: #059669;
+    transform: translateY(-2px);
+}
+
+
+#btnSair {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+#btnSair:hover {
+    background: #dc2626;
     transform: translateY(-2px);
 }
 
@@ -211,6 +235,117 @@ tbody tr:hover {
     background: #1d4ed8;
 }
 
+.login-container {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.45);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.login-container.active {
+    display: flex;
+}
+
+.login-modal {
+    width: 95%;
+    max-width: 450px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+
+    animation: aparecer .3s ease;
+}
+
+.login-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-modal h2 {
+    color: #1f2937;
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.login-text {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.login-modal label {
+    font-weight: 600;
+    color: #444;
+}
+
+.login-modal input {
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+.login-modal input:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+#mensagemLogin {
+    min-height: 20px;
+
+    color: #ef4444;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+#btnLogin {
+    margin-top: 5px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#btnLogin:hover {
+    background: #1d4ed8;
+}
+
 @media (max-width: 768px) {
 
     body {
@@ -225,6 +360,16 @@ tbody tr:hover {
 
     .header span {
         font-size: 20px;
+    }
+
+    .header-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #new,
+    #btnSair {
+        flex: 1;
     }
 
     table {
